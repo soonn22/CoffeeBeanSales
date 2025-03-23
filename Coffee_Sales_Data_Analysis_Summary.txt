@@ -1,0 +1,107 @@
+Purpose
+	Build model to predict optimal inventory of each products in Saudi Arabia.
+	find impact of discount and relevant variable.
+	
+
+	
+Overview
+	the data set contains location information and sales information, which is minimum data required to build predict model. Will build plan, analyze data and build model then take action.
+
+Descriptive analysis
+Quantity Vs. City
+- All pvalue of categorical variables, city have high and this indicate each coefficient is not statisticaly significant and fail to reject the hypothesis the quantity of each city is the same.
+Quantity Vs. product
+-All pvalue of categorical variables, product have high and this indicate each coefficient is not statisticaly significant and fail to reject the hypothesis the quantity of each product is the same.
+
+Big customers
+# there are three big customers
+# a special promotion on the big three will and make a deal with them will boost the market share.
+
+
+EDA
+- Taget variables
+	Quantity and Final Sales
+- Correlation heatmap : no linear relationship among numerical variables.
+
+Popular product by city
+
+	Costa Rica_Quantity    591
+	Name: Abha, dtype: int64
+
+	Brazilian_Quantity    516
+	Name: Buraidah, dtype: int64
+
+	Colombia_Quantity    590
+	Name: Dammam, dtype: int64
+
+	Guatemala_Quantity    621
+	Name: Hail, dtype: int64
+
+	Costa Rica_Quantity    520
+	Ethiopian_Quantity     515
+	Guatemala_Quantity     565
+	Name: Jeddah, dtype: int64
+
+	Colombia_Quantity      502
+	Costa Rica_Quantity    592
+	Name: Medina, dtype: int64
+
+	Costa Rica_Quantity    632
+	Name: Riyadh, dtype: int64
+
+Overall sales
+	- Hail is the most sales quantity 
+	- From Jun to Sep, which are summer months, quantity higher, however with 95 confidence level 	  there is no difference between summer months and other months.
+		
+Build model
+1.Discount rate
+Quantity of sales by discount
+	Build binomial logistic regression model with quantity as independent variable and Used_discoun as dependent variable. used confusion matrix to check the model validity and the model does not work with AUC 0.46.
+
+----------> add other variables as independent variables and perform test.
+
+2. Improving the Predictive Model
+Even with your current dataset, you can try these strategies:
+a) Feature Engineering
+
+
+Derive new features:
+	Per Capita Sales: Normalize sales based on city populations.
+	Discount Effectiveness: Create a feature for 	'Discount_amount/final sales' to quantify discount impact.
+	Seasonal Trends: Extract features from dates, like 'day of the 	week' or 'Holiday indicator'
+b) Handle Categorical Variables
+	Encode your categorical variables effectively. Try target encoding, frequency encoding, or embedding techniques for more meaningful representations.
+
+c) Test Different Models
+	Use advanced models like:
+		Gradient Boosting Regressors (e.g., XGBoost, CatBoost, 	LightGBM): Great for handling complex data and interactions.
+		Neural Networks (DNN): If you have a large dataset and 	suspect non-linear patterns.
+		Time Series Models: If your sales depend on temporal 	trends, try ARIMA, SARIMAX, or LSTM models.
+
+d) Hyperparameter Tuning
+	Use tools like GridSearchCV or Optuna to find the best 	parameters for your model.
+e) Data Augmentation
+	Simulate scenarios by creating synthetic data (e.g., use SMOTE 	for imbalanced sales data across cities/products).
+f) Regularization
+	Simulate scenarios by creating synthetic data (e.g., use SMOTE 	for imbalanced sales data across cities/products).
+----------------------------------------------------------------------
+2. predicting inventory
+In order to predict inventory required, used city, month, and product. however, i could not build the model as lack of relationships between independent and dependent variables. 
+
+Conclusion
+	I have found meaningful results such as the top buyer, and no correlation among variables.
+I conclude that we need more informations to build models to predict quantity of sales and discount impact on sales. additional information may include related to quantity 
+a)  Sales and Inventory Data
+ Sales and Inventory Data
+Historical Inventory Levels: Add information on past inventory amounts and stock-outs to capture supply-demand dynamics.
+Waste/Expiration Data: Include the number of products that spoiled or went unsold to refine inventory predictions.
+Sales Time Data: Record timestamps more granularly (e.g., daily/hourly sales) to account for short-term trends.
+
+b)  Market/Customer Data
+Promotions/Events: Track promotional activities and local events, which could impact sales spikes.
+Customer Feedback: Add review/rating data or customer preferences for specific products
+
+c) Geographic/Location Data
+Foot Traffic: If sales locations are physical stores, include data on customer foot traffic
+Regional Patterns: Consider adding broader regional economic indicators, such as population or income
+	
