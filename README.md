@@ -54,7 +54,7 @@ linearity
 ## Conclusion
 The model building process was ultimately unsuccessful. Recognizing the limitations of the given data, I sought open data sources related to coffee sales in Saudi Arabia from 2023 to 2024 but was unable to locate relevant datasets. Given this situation, I recommend collecting additional data to enhance the modeling process. Specifically, collecting sales/inventory data, market/customer data, and geographic/location data could prove valuable for building better predictive models in the future.
 
-## Data examples
+## Data examples to collect
 1. Sales and Inventory Data\
 - Historical Inventory Levels: Add information on past inventory amounts and stock-outs to capture supply-demand dynamics.\
 - Waste/Expiration Data: Include the number of products that spoiled or went unsold to refine inventory predictions.\
