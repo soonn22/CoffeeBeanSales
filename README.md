@@ -1,7 +1,7 @@
-### Coffee Bean Sales in Saudi Arabia in 2023 and 2024 Data Analysis ##
-
+# Coffee Bean Sales in Saudi Arabia in 2023 and 2024 Data Analysis ##
+----------------------------------------------
 ## Data Resource
-Data set was downloaded from Kaggle. you can find the data [here](https://www.kaggle.com/datasets/halaturkialotaibi/coffee-bean-sales-dataset)
+Data set was downloaded from Kaggle. you can find the data [here.](https://www.kaggle.com/datasets/halaturkialotaibi/coffee-bean-sales-dataset)\
 The data contains sales, amount and discount of data of coffee bean in 10 cities in Saudi Arabia from 2023 and 2024.
 
 ## Purpose and Tasks
@@ -9,7 +9,6 @@ The main goals of this analysis to build a model to predict final sales of coffe
 
 ## EDA summary
 1. top 3 big customers: Found outliers of final sales
-
 and this tells us that there are
 three customers who purchase
 more than other.
@@ -53,21 +52,20 @@ linearity
 
 
 ## Conclusion
-the model building process was ultimately unsuccessful. Recognizing the limitations of the given data, I sought open data sources related to coffee sales in Saudi Arabia from 2023 to 2024 but was unable to locate relevant datasets. Given this situation, I recommend collecting additional data to enhance the modeling process. Specifically, collecting sales/inventory data, market/customer data, and geographic/location data could prove valuable for building better predictive models in the future.
+The model building process was ultimately unsuccessful. Recognizing the limitations of the given data, I sought open data sources related to coffee sales in Saudi Arabia from 2023 to 2024 but was unable to locate relevant datasets. Given this situation, I recommend collecting additional data to enhance the modeling process. Specifically, collecting sales/inventory data, market/customer data, and geographic/location data could prove valuable for building better predictive models in the future.
 
 ## Data examples
-a) Sales and Inventory Data
+1. Sales and Inventory Data\
+- Historical Inventory Levels: Add information on past inventory amounts and stock-outs to capture supply-demand dynamics.\
+- Waste/Expiration Data: Include the number of products that spoiled or went unsold to refine inventory predictions.\
+- Sales Time Data: Record timestamps more granularly (e.g., daily/hourly sales) to account for short-term trends.\
 
-Historical Inventory Levels: Add information on past inventory amounts and stock-outs to capture supply-demand dynamics.
-Waste/Expiration Data: Include the number of products that spoiled or went unsold to refine inventory predictions.
-Sales Time Data: Record timestamps more granularly (e.g., daily/hourly sales) to account for short-term trends.
-b) Market/Customer Data
+2. Market/Customer Data\
+- Promotions/Events: Track promotional activities and local events, which could impact sales spikes.\
+- Customer Feedback: Add review/rating data or customer preferences for specific products\
 
-Promotions/Events: Track promotional activities and local events, which could impact sales spikes.
-Customer Feedback: Add review/rating data or customer preferences for specific products
-c) Geographic/Location Data
-
-Foot Traffic: If sales locations are physical stores, include data on customer foot traffic
-Regional Patterns: Consider adding broader regional economic indicators, such as population or income
+3. Geographic/Location Data\
+- Foot Traffic: If sales locations are physical stores, include data on customer foot traffic\
+- Regional Patterns: Consider adding broader regional economic indicators, such as population or income\
 
 
