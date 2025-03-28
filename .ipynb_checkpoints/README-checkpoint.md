@@ -1,29 +1,73 @@
-# CoffeeBeanSales
-Curious dataset to understand sales of coffees
-The dataset was downloaded from kaggle database and here is the link.
-https://www.kaggle.com/datasets/halaturkialotaibi/coffee-bean-sales-dataset/data
+### Coffee Bean Sales in Saudi Arabia in 2023 and 2024 Data Analysis ##
 
-📌 Coffee Sales Dataset
-📝 Description
-This synthetic dataset contains coffee sales data over 2 years in Saudi Arabia, covering purchases from 100 customers across 5 different coffee Bean types. It includes details on quantity, pricing, discounts, and total sales, making it ideal for analyzing purchase trends, price impact, and market behavior.
+## Data Resource
+Data set was downloaded from Kaggle. you can find the data [here](https://www.kaggle.com/datasets/halaturkialotaibi/coffee-bean-sales-dataset)
+The data contains sales, amount and discount of data of coffee bean in 10 cities in Saudi Arabia from 2023 and 2024.
 
-📅 Time Period
-From: January 1, 2023
-To: December 31, 2024
+## Purpose and Tasks
+The main goals of this analysis to build a model to predict final sales of coffee beans in Saudi Arabia and find the impact of discounts.
 
-📌 Dataset Columns
-Date: Purchase date
-Customer_ID: Unique customer identifier
-Category : Product category (Coffee Beans)
-Product: Coffee type (Brazilian, Ethiopian, Colombian, Costa Rica, Guatemala)
-Unit Price: Price per unit for each product
-Quantity: Number of units purchased
-Sales Amount : Total sales (Quantity × Unit Price)
-Used_Discount: Whether a discount was applied (True/False)
-Discount_Amount: Discount value applied (20%)
-Final Sales : Sales After Discount
+## EDA summary
+1. top 3 big customers: Found outliers of final sales
 
-🎯 Potential Uses
-Analyze daily and monthly sales trends.
-Build predictive models for future sales forecasting.
-Understand customer behavior.
+and this tells us that there are
+three customers who purchase
+more than other.
+
+2. Sales trends: Coffee bean sales fluctuate yearly,
+rising early in the year, dipping in
+spring, increasing in summer, and
+dropping again. The decline from
+March to April may be linked to
+Ramadan, which influences
+consumption patterns.
+
+4. City has difference preference
+of products such as, Guatemala
+for Hail and Costa Rica for
+Riyadh.
+
+
+## Building a model
+
+1. An analysis was conducted to
+evaluate the impact of discounts
+on quantity and sales. However, it
+was not possible to construct a
+reliable model with the given
+variables, as the results showed
+a low AUC score and poor
+performance metrics, including
+accuracy, recall, and precision, all
+around 0.55
+
+2. The multivariate linear regression
+model, incorporating two
+variables—quantity and sales
+amount—was developed to
+predict final sales. Although the
+model achieved a high R-squared
+value of 0.95, it failed to satisfy
+key assumptions, particularly
+linearity
+
+
+## Conclusion
+the model building process was ultimately unsuccessful. Recognizing the limitations of the given data, I sought open data sources related to coffee sales in Saudi Arabia from 2023 to 2024 but was unable to locate relevant datasets. Given this situation, I recommend collecting additional data to enhance the modeling process. Specifically, collecting sales/inventory data, market/customer data, and geographic/location data could prove valuable for building better predictive models in the future.
+
+## Data examples
+a) Sales and Inventory Data
+
+Historical Inventory Levels: Add information on past inventory amounts and stock-outs to capture supply-demand dynamics.
+Waste/Expiration Data: Include the number of products that spoiled or went unsold to refine inventory predictions.
+Sales Time Data: Record timestamps more granularly (e.g., daily/hourly sales) to account for short-term trends.
+b) Market/Customer Data
+
+Promotions/Events: Track promotional activities and local events, which could impact sales spikes.
+Customer Feedback: Add review/rating data or customer preferences for specific products
+c) Geographic/Location Data
+
+Foot Traffic: If sales locations are physical stores, include data on customer foot traffic
+Regional Patterns: Consider adding broader regional economic indicators, such as population or income
+
+
